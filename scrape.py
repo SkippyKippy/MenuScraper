@@ -3,12 +3,13 @@ from bs4 import BeautifulSoup
 import discord
 from discord.ext import commands
 import asyncio
+import os
 
 BASE_URL = "https://dining.umich.edu/menus-locations/dining-halls/"
 MOSHER = BASE_URL + "mosher-jordan/"
 MARKLEY = BASE_URL + "markley/"
 
-token = "NzY1MDk2MTM5OTc1NTU3MTQw.X4P1Tg.oVQBO8nZ5wVHRG2mq9fuQHMgofQ"
+token = os.environ.get(TOKEN)
 client = commands.Bot(command_prefix="?")
 
 
